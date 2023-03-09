@@ -1,0 +1,42 @@
+import turtle
+
+
+t = turtle.Turtle()
+
+
+turtle.bgcolor("red")
+
+
+t.color("white")
+t.penup()
+t.goto(-200, 0)
+t.pendown()
+t.write("University of Lodz", font=("Arial", 48, "bold"))
+
+logo = input("Do you want to add the university logo? (yes/no): ")
+if logo.lower() == "yes":
+    t.penup()
+    t.goto(50, 220)
+    t.pendown()
+    t.color("white", "black")
+    t.begin_fill()
+    t.circle(60)
+    t.end_fill()
+    t.penup()
+    t.goto(10, 240)
+    t.pendown()
+    t.color("white")
+    t.write("UL", font=("Arial", 48, "bold"))
+
+
+t.penup()
+t.goto(-250, -250)
+t.pendown()
+t.write("Established in 1945", font=("Arial", 16, "bold"))
+t.penup()
+t.goto(120, -250)
+t.pendown()
+t.write("©2023 University of Lodz", font=("Arial", 16, "bold"))
+
+
+turtle.done()
